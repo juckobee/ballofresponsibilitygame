@@ -1,0 +1,20 @@
+.scoreCounter {
+  font-family: 'Bangers', cursive;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  flex: 1;
+  text-align: center;
+}
+
+.left {
+  text-align: right;
+}
+
+.right {
+  text-align: left;
+}

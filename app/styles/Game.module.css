@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.gameWrapper {
+  position: relative;
+  width: 1000px; /* Increased to accommodate larger images */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.gameContainer {
+  position: relative;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerImageLeft,
+.playerImageRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; /* Set a fixed width for better alignment */
+}
+
+.playerImageLeft {
+  right: calc(100% + 50px);
+  align-items: flex-end; /* Align content to the right */
+  text-align: right; /* Align text to the right */
+}
+
+.playerImageRight {
+  left: calc(100% + 50px);
+  align-items: flex-start; /* Align content to the left */
+  text-align: left; /* Align text to the left */
+}
+
+.playerImageLeft img,
+.playerImageRight img {
+  width: 150px; /* Increased size by 50% */
+  height: 150px; /* Increased size by 50% */
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 15px 0 45px; /* Increased padding, especially at the bottom */
+}
+
+.scoreSeparator {
+  font-family: 'Bangers', cursive;
+  font-size: 2.2rem; /* Increased font size */
+  color: #fff;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin: 0 5px;
+}
+
+.gameWindow {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  background-color: #000;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.startMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Bangers', cursive;
+}
+
+.gameStats {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.7rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 2px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
+}
+
+.instructionsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.instructionText {
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.centerLine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.centerCircle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.playerInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px; /* Increased top margin */
+  padding: 5px 0; /* Added padding to top and bottom */
+}
+
+.playerColumn {
+  display: flex;
+  align-items: center;
+}
+
+.playerName {
+  font-family: 'Bangers', cursive;
+  font-size: 1.8rem; /* Increased font size */
+  color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-right: 10px; /* Increased margin */
+}
+
+.livesContainer {
+  display: flex;
+}
+
+.life {
+  width: 12px;
+  height: 12px;
+  margin: 0 1px;
+  background-image: url('/ball.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lostLife {
+  opacity: 0.2;
+}
+
+.gameOverContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gameOverMessage {
+  color: red;
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Bangers', cursive;
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+.gameOverSubtext {
+  color: #FFA500;
+  font-size: 1.5rem;
+  font-family: 'Bangers', cursive;
+  margin-top: 10px;
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.bounceMessage {
+  font-family: 'Bangers', cursive;
+  font-size: 1.4rem; /* Increased font size */
+  color: #FFD700; /* Gold color */
+  text-align: center;
+  margin-top: 15px; /* Increased top margin */
+  max-width: 200px; /* Increased to accommodate larger text */
+  text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #1a1a1a;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ballContainer {
+  margin-right: 1rem;
+}
+
+.ballImage {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+.vintageTitle {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  line-height: 1;
+  transform: skew(-5deg);
+}
+
+.topLine,
+.middleLine,
+.bottomLine {
+  display: block;
+  -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000;
+  filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.7));
+}
+
+.topLine {
+  font-size: 4rem;
+  background: linear-gradient(to bottom, #ffff00, #ffa500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.middleLine {
+  font-size: 5rem;
+  background: linear-gradient(to bottom, #ffa500, #ff4500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: -0.5rem 0;
+}
+
+.bottomLine {
+  font-size: 3.5rem;
+  background: linear-gradient(to bottom, #ff4500, #ff0000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (max-width: 600px) {
+  .titleContainer {
+    flex-direction: column;
+  }
+
+  .ballContainer {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .topLine {
+    font-size: 3rem;
+  }
+  .middleLine {
+    font-size: 4rem;
+  }
+  .bottomLine {
+    font-size: 2.5rem;
+  }
+}
