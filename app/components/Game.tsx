@@ -315,7 +315,7 @@ const Game: React.FC = () => {
           </div>
         </div>
         <div className={styles.gameStats}>
-          Level: {level} | Time: {Math.ceil(countdown)} | Speed: {ballSpeed.toFixed(2)} | Paddle: {paddleHeight.toFixed(0)}
+          Level: {level} | <span className={styles.gameTimer}>Time: {Math.ceil(countdown)}</span> | Speed: {ballSpeed.toFixed(2)} | Paddle: {paddleHeight.toFixed(0)}
         </div>
         <div className={styles.instructionsContainer}>
           <div className={styles.instructionText}>
