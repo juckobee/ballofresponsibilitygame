@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); */
 
 .gameWrapper {
   position: relative;
@@ -55,16 +55,14 @@
   padding: 15px 0 45px; /* Increased padding, especially at the bottom */
 }
 
-.scoreSeparator {
-  font-family: 'Bangers', cursive;
-  font-size: 2.2rem; /* Increased font size */
-  color: #fff;
-  text-shadow: 
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-  margin: 0 5px;
+.scoreSeparator,
+.startMessage,
+.playerName,
+.gameOverMessage,
+.gameOverSubtext,
+.bounceMessage {
+  font-family: var(--font-bangers), cursive;
+  /* Other styles remain the same */
 }
 
 .gameWindow {
